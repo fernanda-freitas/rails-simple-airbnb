@@ -1,3 +1,10 @@
+<h1>All our Flats</h1>
+
+<% if @flats.count == 1 %>
+  <p>There is <%= @flats.count %> flat available</p>
+<% elsif @flats.count > 1 %>
+  <p>There are <%= @flats.count %> flats available</p>
+<% end %>
 <% @flats.each do |flat| %>
   <p><%= flat.name %></p>
   <p><%= flat.description %></p>
@@ -5,4 +12,9 @@
   <p><%= flat.price_per_night %></p>
   <p><%= flat.number_of_guests %></p>
   <%= link_to 'More info', flat_path(flat), class:"btn btn-primary" %>
+  <%= link_to 'Remove',
+               flat_path(flat),
+               method: :delete,
+               data: { confirm: "Do you want to delete this flat?" },
+               class:"btn btn-danger" %>
 <% end %>
