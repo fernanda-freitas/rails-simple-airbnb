@@ -5,17 +5,28 @@
 <% elsif @flats.count > 1 %>
   <p>There are <%= @flats.count %> flats available</p>
 <% end %>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
 <% @flats.each do |flat| %>
-  <p><%= flat.name %></p>
-  <p><%= flat.description %></p>
-  <p><%= flat.address %></p>
-  <p><%= flat.price_per_night %></p>
-  <p><%= flat.number_of_guests %></p>
-  <%= link_to 'More info', flat_path(flat), class:"btn btn-outline-primary" %>
-  <%= link_to 'Edit', edit_flat_path(flat), class:"btn btn-outline-primary" %>
-  <%= link_to 'Remove',
-               flat_path(flat),
-               method: :delete,
-               data: { confirm: "Do you want to delete this flat?" },
-               class:"btn btn-link" %>
+  <div class="col">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag flat.picture_url, class:'card-img-top' %>
+      <div class="card-body">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description %></p>
+        <div>
+          <span><%= flat.price_per_night %></span>
+          <span><%= flat.number_of_guests %></span>
+        </div>
+        <%= link_to 'Remove',
+                    flat_path(flat),
+                    method: :delete,
+                    data: { confirm: "Do you want to delete this flat?" },
+                    class:"btn btn-link link-secondary" %>
+        <%= link_to 'Edit', edit_flat_path(flat), class:"btn btn-link link-secondary" %>
+        <%= link_to 'More info', flat_path(flat), class:"btn btn-primary" %>
+      </div>
+    </div>
+  </div>
 <% end %>
+</div>
