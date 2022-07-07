@@ -8,9 +8,9 @@
 
 <div class="row row-cols-1 row-cols-md-2 g-4">
 <% @flats.each do |flat| %>
-  <div class="col">
+  <div class="col-md-3">
     <div class="card" style="width: 18rem;">
-      <%= image_tag flat.picture_url, class:'card-img-top' %>
+      <%= image_tag flat.picture_url || @default_image %>
       <div class="card-body">
         <h5 class="card-title"><%= flat.name %></h5>
         <p class="card-text"><%= flat.description %></p>
