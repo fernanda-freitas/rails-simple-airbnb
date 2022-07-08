@@ -14,7 +14,7 @@ class FlatsController < ApplicationController
 
   def index
     @flats = Flat.all
-    @default_image = 'https://images.unsplash.com/photo-1554995207-c18c203602cb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+    @default_image = 'https://images.unsplash.com/photo-1543589365-3cc63c87243f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bG9mdHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60'
   end
 
   def show
