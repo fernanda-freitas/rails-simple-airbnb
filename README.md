@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+🏡 A simple Airbnb clone to fulfill the following user stories:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- See all the available flats on our website
+- Post a flat to the website, specifying its name and address
+- See detailed information of a given flat
+- Edit the details of a flat if I made a mistake
+- Delete a flat from the website, in case I don’t want to rent it anymore
